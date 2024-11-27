@@ -1,0 +1,9 @@
+<h1><%= link_to 'Calendar', calendario_index_path %></h1>
+
+<h2><%= @mes %> at <%= @ano %></h2>
+
+<ul>
+  <% @dias.each do |dia| %>
+    <li><%= "#{dia.strftime('%a')} - #{dia.day}" %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,17 @@
+<h1>Calendar</h1>
+
+<h2>2024</h2>
+<ul>
+  <% @meses.each do |mes| %>
+    <% if %w[October November December].include?(mes) %>
+      <li><%= link_to mes, calendario_mes_path(ano: 2024, mes: mes) %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h2>2025</h2>
+<ul>
+  <% @meses.each do |mes| %>
+    <li><%= link_to mes, calendario_mes_path(ano: 2025, mes: mes) %></li>
+  <% end %>
+</ul>
